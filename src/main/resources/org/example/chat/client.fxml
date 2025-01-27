@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.TextArea?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.VBox?>
+
+<VBox maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/22" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.chat.ClientAppController">
+   <children>
+      <HBox alignment="TOP_CENTER">
+         <children>
+            <TextArea fx:id="textBoard" />
+            <TextArea fx:id="userBoard" prefHeight="400.0" prefWidth="200.0" />
+         </children>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+      </HBox>
+      <HBox>
+         <VBox.margin>
+            <Insets bottom="10.0" left="10.0" right="10.0" top="10.0" />
+         </VBox.margin>
+         <children>
+            <TextArea fx:id="messageArea" promptText="Enter your message here..." />
+            <VBox alignment="CENTER" prefHeight="200.0" prefWidth="200.0" spacing="10.0">
+               <children>
+                  <Button fx:id="send" mnemonicParsing="false" onAction="#sendBttnPressed" prefHeight="26.0" prefWidth="64.0" text="Send" />
+                  <Button fx:id="connect" mnemonicParsing="false" onAction="#connectBttnPressed" text="Connect" />
+                  <Button fx:id="leave" mnemonicParsing="false" onAction="#leaveBttnPressed" prefHeight="26.0" prefWidth="64.0" text="Leave" />
+               </children>
+               <HBox.margin>
+                  <Insets />
+               </HBox.margin>
+            </VBox>
+         </children>
+      </HBox>
+   </children>
+</VBox>
